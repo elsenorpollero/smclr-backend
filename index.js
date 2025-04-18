@@ -61,6 +61,9 @@ const sendEmail = async (pdfBuffer, email) => {
     console.error('Error sending email:', err);
   }
 };
+app.get('/health', (req, res) => {
+  res.send('Backend is awake!');
+});
 
 app.get('/', async (req, res) => {
   try {
